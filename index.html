@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation | Emma & James</title>
+    <!-- Google Fonts for Elegant Typography -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- External CSS stylesheet Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Invitation Card Container -->
+    <div class="card-container">
+        <p class="intro-text">The Wedding Invitation</p>
+        
+        <h1 class="couple-names">
+            Emma 
+            <span>&amp;</span> 
+            James
+        </h1>
+        
+        <p class="message">
+            Together with their families, joyfully invite you to celebrate their love and union.
+        </p>
+
+        <div class="details-box">
+            <p class="date">SATURDAY, OCTOBER 16, 2027</p>
+            <p class="time">AT 4:00 O'CLOCK IN THE AFTERNOON</p>
+            <p class="venue">The Grand Willow Estate<br>123 Serenity Lane, California</p>
+        </div>
+
+        <!-- Dynamic Countdown Elements -->
+        <div class="countdown-container">
+            <div class="time-segment">
+                <span class="time-num" id="days">00</span>
+                <span class="time-label">Days</span>
+            </div>
+            <div class="time-segment">
+                <span class="time-num" id="hours">00</span>
+                <span class="time-label">Hrs</span>
+            </div>
+            <div class="time-segment">
+                <span class="time-num" id="minutes">00</span>
+                <span class="time-label">Min</span>
+            </div>
+            <div class="time-segment">
+                <span class="time-num" id="seconds">00</span>
+                <span class="time-label">Sec</span>
+            </div>
+        </div>
+
+        <button class="rsvp-btn" id="openRsvp">Kindly Reply</button>
+    </div>
+
+    <!-- RSVP Modal Structure -->
+    <div class="modal-overlay" id="rsvpModal">
+        <div class="modal-box">
+            <button class="close-btn" id="closeRsvp">&times;</button>
+            <h3>R.S.V.P</h3>
+            <form id="rsvpForm">
+                <div class="form-group">
+                    <label for="guestName">Full Name</label>
+                    <input type="text" id="guestName" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="attendance">Will you attend?</label>
+                    <select id="attendance" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="yes">Joyfully Accept</option>
+                        <option value="no">Regretfully Decline</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="meal">Meal Preference</label>
+                    <select id="meal">
+                        <option value="standard">Standard Beef/Chicken</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Submit Response</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- External JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>

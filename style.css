@@ -1,0 +1,214 @@
+/* Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f3f0;
+    color: #4a4a4a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Invitation Card Container */
+.card-container {
+    background-color: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(163, 142, 131, 0.2);
+    border: 1px solid #eae1db;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Floral Borders */
+.card-container::before, .card-container::after {
+    content: "✿";
+    font-size: 24px;
+    color: #d4af37;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+.card-container::before { top: 15px; }
+.card-container::after { bottom: 15px; }
+
+/* Typography Styles */
+.intro-text {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8c827b;
+    margin-bottom: 20px;
+}
+.couple-names {
+    font-family: 'Alex Brush', cursive;
+    font-size: 4rem;
+    color: #b08d57;
+    margin: 15px 0;
+    line-height: 1;
+}
+.couple-names span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    display: block;
+    margin: 5px 0;
+    color: #8c827b;
+}
+.message {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+/* Event Details */
+.details-box {
+    border-top: 1px solid #eae1db;
+    border-bottom: 1px solid #eae1db;
+    padding: 20px 0;
+    margin: 25px 0;
+}
+.date {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #4a4a4a;
+}
+.time, .venue {
+    font-size: 0.95rem;
+    margin-top: 8px;
+    color: #6e655f;
+}
+
+/* Countdown Timer */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+.time-segment {
+    background-color: #fcf9f7;
+    border: 1px solid #f0e6e1;
+    padding: 10px;
+    border-radius: 6px;
+    min-width: 70px;
+}
+.time-num {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #b08d57;
+    display: block;
+}
+.time-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8c827b;
+}
+
+/* RSVP Interactive Button */
+.rsvp-btn {
+    background-color: #b08d57;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 15px rgba(176, 141, 87, 0.3);
+}
+.rsvp-btn:hover {
+    background-color: #967445;
+}
+
+/* RSVP Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    text-align: left;
+}
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #8c827b;
+}
+.modal-box h3 {
+    font-family: 'Alex Brush', cursive;
+    font-size: 2.5rem;
+    color: #b08d57;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #6e655f;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eae1db;
+    border-radius: 4px;
+    font-family: inherit;
+    color: #4a4a4a;
+}
+.submit-btn {
+    width: 100%;
+    background-color: #b08d57;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
