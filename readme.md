@@ -96,5 +96,7 @@ Once customized, you can launch this invitation website online for free using an
 
 \*   \*\*Netlify / Vercel:\*\* Simply drag and drop your root project directory directly into their deployment landing zones.
 
+[click to view](https://minshida-latheef.github.io/wedding-invitation-website/)
+
 
 
